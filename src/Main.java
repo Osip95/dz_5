@@ -77,32 +77,25 @@ public class Main {
         for (int i = 0, n = 1; true; n++) {
             if (n == array.length - 1) {
                 y = array[n] + array[i];
-                if (y == 2) {
-                    System.out.println(array[n] + " " + array[i]);
+                if (y == -2) {
+                    System.out.println(array[i] + " " + array[n]);
                     break;
                 }
                 i++;
                 n = i + 1;
                 y = array[n] + array[i];
-                if (y == 2) {
-                    System.out.println(array[n] + " " + array[i]);
+                if (y == -2) {
+                    System.out.println(array[i] + " " + array[n]);
                     break;
                 }
             } else {
                 y = array[n] + array[i];
-                if (y == 2) {
-                    System.out.println(array[n] + " " + array[i]);
+                if (y == -2) {
+                    System.out.println(array[i] + " " + array[n]);
                     break;
                 }
             }
-
-            if ((i == array.length - 2) && (n == array.length - 1)) {
-                y = array[n] + array[i];
-                if (y == 2) {
-                    System.out.println(array[n] + " " + array[i]);
-                }
-                break;
-            }
+            if ((i == array.length - 2) && (n == array.length - 1)) break;
         }
 
         //task 9
@@ -112,35 +105,27 @@ public class Main {
         for (int i = 0, n = 1; true; n++) {
             if (n == array1.length - 1) {
                 x = array1[n] + array1[i];
-                if (x == 2) {
+                if (x == -2) {
                     list.add(array1[i]);
                     list.add(array1[n]);
                 }
                 i++;
                 n = i + 1;
                 x = array1[n] + array1[i];
-                if (x == 2) {
+                if (x == -2) {
                     list.add(array1[i]);
                     list.add(array1[n]);
                 }
             } else {
                 x = array1[n] + array1[i];
-                if (x == 2) {
+                if (x == -2) {
                     list.add(array1[i]);
                     list.add(array1[n]);
                 }
             }
-            if ((i == array1.length - 2) && (n == array1.length - 1)) {
-                x = array1[n] + array1[i];
-                if (x == 2) {
-                    list.add(array1[i]);
-                    list.add(array1[n]);
-                }
-                break;
-            }
+            if ((i == array1.length - 2) && (n == array1.length - 1)) break;
         }
         System.out.println(list);
-
     }
 
 
